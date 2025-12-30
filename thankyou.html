@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenThumb - Order Confirmed!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Specific styles for the Thank You page */
+        .thank-you-section {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: var(--background-light);
+            min-height: calc(100vh - 180px); /* Adjust based on header/footer height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .thank-you-content {
+            background-color: var(--text-color-light);
+            padding: 40px;
+            border-radius: var(--border-radius-md);
+            box-shadow: 0 8px 25px var(--shadow-medium);
+            max-width: 700px;
+            width: 100%;
+            animation: fadeInScale 0.6s ease-out;
+        }
+
+        .thank-you-content .icon-check {
+            font-size: 4em;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            animation: bounceIn 0.8s ease-out;
+        }
+
+        .thank-you-content h1 {
+            font-size: 3em;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .thank-you-content p {
+            font-size: 1.1em;
+            color: var(--text-color-dark);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .thank-you-content .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.2); opacity: 1; }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">GreenThumb</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="plants.html">Plants</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+                <a href="checkout.html" class="cart-icon" id="cart-icon-header">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="thank-you-section">
+            <div class="thank-you-content">
+                <i class="fas fa-check-circle icon-check"></i>
+                <h1>Thank You for Your Order!</h1>
+                <p>Your order has been placed successfully and is now being processed. You will receive an email confirmation shortly.</p>
+                <div class="btn-group">
+                    <a href="plants.html" class="btn">Continue Shopping</a>
+                    <a href="index.html" class="btn secondary-btn">Back to Home</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>GreenThumb</h4>
+                <p>Your ultimate destination for premium plants and expert care, designed to bring nature's tranquility into your life.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="plants.html">Plants</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Green Lane, Garden City</p>
+                <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+                <p><i class="fas fa-envelope"></i> contact@greenthumb.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GreenThumb. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- This script manages the cart count and persistence -->
+    <script src="js/cart-manager.js"></script>
+</body>
+</html>
