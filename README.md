@@ -4,7 +4,7 @@ A static plant nursery website designed to showcase different categories of plan
 
 The project includes plant listings, individual plant detail pages, and a basic add-to-cart system using browser storage.
 
-🔗 Live Demo: https://plant-nursery-website-xz76.vercel.app/
+
 
 ---
 
@@ -29,5 +29,4 @@ The project includes plant listings, individual plant detail pages, and a basic 
 
 ---
 
-## 📂 Project Structure
 
